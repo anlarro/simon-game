@@ -46,7 +46,9 @@ $(".btn").click(function() {
         $(".start").text("Play");
         $(".start").css("background-color","#011F3F");
         started=false;
-        $(".level").text(level);
+        if (level > Number($(".level").text())){
+          $(".level").text(level);
+        }
         level=0;
         userClickedPattern=[];
       }, 1000);
